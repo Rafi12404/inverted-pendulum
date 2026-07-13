@@ -1,0 +1,22 @@
+Analisis Grafik
+1.	Open-Loop Impulse Response
+Pada grafik impuls, terlihat bahwa sistem merespons dengan kenaikan yang sangat tajam mendekati akhir waktu simulasi. Hal ini menunjukkan bahwa sistem tidak stabil dalam kondisi open-loop, karena sudut pendulum (θ) dan posisi cart (x) tidak kembali ke keadaan setimbang.
+•	Settling time (θ) tidak tercapai dalam batas < 5 s, karena sudut pendulum terus meningkat tanpa stabilisasi.
+•	Dengan kata lain, sistem gagal memenuhi kriteria desain untuk respon impuls.
+
+2.	Open-Loop Step Response
+Pada grafik step response, baik posisi cart (x) maupun sudut pendulum (θ) meningkat dengan cepat.
+•	Rise time (x) memang relatif cepat (< 0.5 s), sesuai kriteria.
+•	Namun, settling time (x dan θ) tidak tercapai dalam < 5 s, karena sistem tidak pernah benar-benar stabil.
+•	Sudut pendulum (θ) jauh melebihi batas 0.35 rad (20°), sehingga sistem tidak memenuhi syarat kestabilan.
+•	Steady-state error juga besar, karena output tidak berhenti pada nilai akhir yang diinginkan.
+3.	Pole-Zero Plot
+Dari grafik pole-zero, terlihat bahwa terdapat pole pada sumbu real yang berada di sisi kanan (positif). Hal ini menandakan sistem open-loop tidak stabil, karena adanya pole dengan bagian real positif menyebabkan respon sistem tumbuh tak terbatas.
+
+
+Kesimpulan keseluruhan
+•	Sistem inverted pendulum dengan parameter yang diberikan tidak stabil dalam kondisi open-loop, baik pada respon impuls maupun step.
+•	Kriteria desain seperti settling time < 5 s, sudut pendulum ≤ 0.35 rad, dan steady-state error < 2% tidak terpenuhi.
+•	Pole-zero plot mengonfirmasi ketidakstabilan karena adanya pole di sebelah kanan sumbu real.
+•	Oleh karena itu, sistem ini memerlukan kontroler tambahan (misalnya PID, LQR, atau state feedback) agar bisa memenuhi spesifikasi desain dan menjaga pendulum tetap tegak.
+
